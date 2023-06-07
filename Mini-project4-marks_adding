@@ -1,0 +1,21 @@
+marks_file = "./test.txt"  
+
+marks = {}  
+
+with open(marks_file, 'r') as file:
+    for line in file:
+        roll_number, mark = line.strip().split(",")  
+        # print(mark)
+        try:
+            mark = int(mark)
+        except:
+            mark = 0  
+
+        if roll_number in marks:
+            marks[roll_number] += mark  
+        else:
+            marks[roll_number] = mark  
+
+
+for roll_number, total_marks in marks.items():
+    print("Roll Number:", roll_number, "Total Marks:", total_marks)
