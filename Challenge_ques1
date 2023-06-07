@@ -1,0 +1,11 @@
+L = ["Ram",1,"Sham",2,3]
+
+print(L)
+try:
+    L.sort()
+except:
+    L1 = []
+    for i in range(0,len(L)):
+        L1.append(str(L[i]))
+    L1.sort()
+    print(L1)
