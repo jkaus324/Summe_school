@@ -9,3 +9,4 @@ except:
         L1.append(str(L[i]))
     L1.sort()
     print(L1)
+    print(L)
